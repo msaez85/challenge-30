@@ -53,10 +53,10 @@ function computerPlay() {
 
 function play(playerSelection) {
 	clearInterval(IDinterval);
-    const computerSelection = computerPlay();
+  const computerSelection = computerPlay();
 	changeImage(playerSelection,computerSelection);
-    const roundResult = playRound(playerSelection, computerSelection);
-    updateScore(roundResult);
+  const roundResult = playRound(playerSelection, computerSelection);
+  updateScore(roundResult);
 	wait(2000);
 }
 
@@ -73,7 +73,7 @@ function randomImage() {
 }
 
 function EndGame() {
-	alert((playerScore > computerScore)?'You won the Match':((playerScore = computerScore)?'You got even with PC':'You lose the Match'));
+	alert((playerScore > computerScore)?'You won the Match':((playerScore == computerScore)?'You got even with PC':'You lose the Match'));
 	resetScore();
 }
 
