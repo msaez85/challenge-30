@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="body">
+    <header class="Header">
+        <h1 class="Title">Rock, Paper or Scissor</h1>
+        <div class="Scores">
+            <div class="Score">
+                <h2 class="NameScore">User</h2>
+                <input type="text" id="UserResult" value="0" disabled>
+            </div>
+            <div class="Score">
+                <h2 class="NameScore">PC</h2>
+                <input type="text" id="PCResult"  value="0" disabled>
+            </div>
+        </div>
+    </header>
+    <main class="Game">
+        <div id="Result">Start playing!</div>
+        <div class="Options">
+            <div id="User"><img class="Screen" id="ScreenUser" src="./assets/PiedraIzq.jpg"></div>
+            <div id="PC"><img  class="Screen" id="ScreenPC" src="./assets/PiedraDer.jpg"></div>
+        </div>
+        <div id="UserChoices">
+            <div class="Buttons">
+                <button class="Button" id="Rock" onclick="play(0)">Rock</button>
+                <button class="Button" id="Paper" onclick="play(1)">Paper</button>
+                <button class="Button" id="Scissors" onclick="play(2)">Scissor</button>
+            </div>
+            <div class="Random">Random</div>
+        </div>
+    </main>
+    <footer>
+        <button class="Button" id="Reset" onclick="resetScore()">Reset</button>
+        <button class="Button" id="EndGame" onclick="EndGame()">End Game</button>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
